@@ -1,0 +1,25 @@
+PGP
+===
+
+Per-Device Subkeys
+------------------
+
+Create a subkey:
+
+    gpg --edit-key $ID
+    > addkey
+    ...
+    > save
+
+Export the subkey _without_ the primary key:
+
+    # Note the exclamation point after the key ID.
+    gpg --export-secret-subkeys -a $ID! > subkey.pri
+
+This is a GNU extension that invalidates the primary key in the bundle.
+Other clients won't like it.
+
+Paper Backups
+-------------
+
+Use `paperkey` and `a2ps`.  Prints with per-line checksums &c.
