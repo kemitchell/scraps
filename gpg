@@ -1,0 +1,4 @@
+GNU Privacy Guard
+
+    # Fingerprint subkeys
+    gpg --fingerprint --fingerprint $SUBKEY_ID
