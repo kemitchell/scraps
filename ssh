@@ -1,5 +1,8 @@
 Key Management
 
+    # Generate new key
+    ssh-keygen -t rsa -b 4096
+
     # Reencrypt an existing key
     ssh-keygen -p
 
