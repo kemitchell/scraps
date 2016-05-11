@@ -1,0 +1,25 @@
+Kinesis Advantage Keyboard
+
+Soft Memory Reset:
+
+  Progrm + Shift + F10
+  Hold until blinking stops
+
+Built-in Layouts:
+
+  Hold =, then press p --- Non-Windows PC
+  Hold =, then press w --- Windows PC
+
+Disable Modifier Tones:
+
+  Progrm + Hyphen
+
+Disable Key Click:
+
+  Progrm + Backslash
+
+Remapping
+
+  Progrm + F12, <source>, <destination>
+
+  (Always uses default mapping.)
