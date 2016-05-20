@@ -1,0 +1,39 @@
+Common Form
+
+Services
+
+  forms.commonform.org
+    Publishes [ Form ] log
+
+  users.commonform.org
+    Validates credentials
+
+  projects.commonform.org
+    Serves author/project/edition -> [ Digest ]
+    Publishes [ Edition ]
+
+  api.commonform.org
+    Serves Digest -> Form
+
+  formbackup.commonform.org
+    Subscribes to forms.commonform.org
+    Backs up to S3
+
+  projectbackup.commonform.org
+    Subscribes to projects.commonform.org
+    Backs up to S3
+
+  definitions.commonform.org
+    Subscribes to projects.commonform.org
+    Fetches forms from api.commonform.org
+    Serves /term -> [ Digests ]
+
+  uses.commonform.org
+    Subscribes to projects.commonform.org
+    Fetches forms from api.commonform.org
+    Serves /term -> [ Digests ]
+
+  headings.commonform.org
+    Subscribes to projects.commonform.org
+    Fetches forms from api.commonform.org
+    Serves /heading -> [ Digests ]
