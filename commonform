@@ -37,3 +37,11 @@ Services
     Subscribes to projects.commonform.org
     Fetches forms from api.commonform.org
     Serves /heading -> [ Digests ]
+
+Servers
+
+  pm2 management
+
+  Version proxy server on :80
+
+  X-API-Version headers
