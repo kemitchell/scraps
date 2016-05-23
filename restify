@@ -1,0 +1,14 @@
+- dtrace-provider (optional dep)
+- bunyan
+- default uncaughtException handler
+- negotiator for content negotiation
+- accept-verison headers
+- request handler timers
+- caching headers
+- routes $METHOD -> []
+- LRU cache for router
+- semver versioning in router
+- formidable for form data
+- http-signature
+- spdy
+- vasync
