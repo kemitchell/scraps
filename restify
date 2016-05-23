@@ -2,7 +2,7 @@
 - bunyan
 - default uncaughtException handler
 - negotiator for content negotiation
-- accept-verison headers
+- accept-version headers
 - request handler timers
 - caching headers
 - routes $METHOD -> []
