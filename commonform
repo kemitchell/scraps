@@ -45,3 +45,25 @@ Servers
   Version proxy server on :80
 
   X-API-Version headers
+
+Inputs
+
+  Publisher := ( name, email, password )
+
+  Form := ( data )
+
+  Edition_1 := ( publisher, project, edition, form digest )
+
+  Edition_2 := ( publisher, project, edition, form digest, signatures )
+
+  Edition_3 := ( publisher, project, edition, form digest, signatures, settings )
+
+  Annotation := ( form digest, publisher, timestamp, optional annotation digest, text )
+
+Collections
+
+  POST /forms -> "Repository"
+
+  POST /projects -> referenced Form into "Library"
+
+  Library is indexed.  Repository is not.
