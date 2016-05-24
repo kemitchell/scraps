@@ -56,9 +56,14 @@ Inputs
 
   Edition_2 := ( publisher, project, edition, form digest, signatures )
 
-  Edition_3 := ( publisher, project, edition, form digest, signatures, settings )
+  Edition_3 := (
+    publisher, project, edition, form digest, signatures, settings )
 
-  Annotation := ( form digest, publisher, timestamp, optional annotation digest, text )
+  Annotation := (
+    context form digest, specific form digest,
+    optional annotation digest,
+    publisher, timestamp, text,
+    private flag )
 
 Collections
 
@@ -67,3 +72,62 @@ Collections
   POST /projects -> referenced Form into "Library"
 
   Library is indexed.  Repository is not.
+
+Annotation Context
+
+  Annotations have:
+
+    1. A digest pointing to the _context_ in which they are relevant.
+
+    2. A digest pointing to the _child_ of the context form (or the
+       context form itself) for which they are relevant.
+
+  Form A: ( B ( C ) D )
+  Form X: ( Y Z C )
+
+  (Form A, Form B, and Form X share C as a common child.)
+
+  (C is a child of X, a child of B, and a grandchild of A.)
+
+  Annotation 1: of C in the context of B
+  Annotation 2: of C in the context of X
+  Annotation 3: of C in its own context
+  Annotation 4: of C in the context of A
+
+  When viewing A:
+    Annotation 1 --- C in B --- shown
+    Annotation 2 --- C in X --- not shown
+    Annotation 3 --- C in C --- shown
+    Annotation 4 --- C in A --- shown
+
+  When viewing B:
+    Annotation 1 --- C in B --- shown
+    Annotation 2 --- C in X --- not shown
+    Annotation 3 --- C in C --- shown
+    Annotation 4 --- C in A --- not shown
+
+  When viewing C itself:
+    Annotation 1 --- C in B --- not shown
+    Annotation 2 --- C in X --- not shown
+    Annotation 3 --- C in C --- shown
+    Annotation 4 --- C in A --- not shown
+
+  When viewing X:
+    Annotation 1 --- C in B --- not shown
+    Annotation 2 --- C in X --- shown
+    Annotation 3 --- C in C --- shown
+    Annotation 4 --- C in A --- not shown
+
+  Generalized:
+
+    Show an annotation of ( CHILD in PARENT )
+    in the context of CONTEXT
+    when both:
+
+    1. CHILD is CONTEXT || CHILD is a child of CONTEXT
+
+    2. PARENT is CONTEXT || PARENT is a child of CONTEXT
+
+  Performance:
+
+    This means running one query per child of a form to display.
