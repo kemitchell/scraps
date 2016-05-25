@@ -48,21 +48,29 @@ Servers
 
 Inputs
 
-  Publisher := ( name, email, password )
+  Publisher := (
+    name, email, password )
 
   Form := ( data )
 
-  Edition_1 := ( publisher, project, edition, form digest )
+  Edition_1 := (
+    publisher, project, edition,
+    form digest )
 
-  Edition_2 := ( publisher, project, edition, form digest, signatures )
+  Edition_2 := (
+    publisher, project, edition,
+    form digest, signatures )
 
   Edition_3 := (
     publisher, project, edition, form digest, signatures, settings )
 
   Annotation := (
-    context form digest, specific form digest,
+    context form digest,
+    specific form digest,
     optional annotation digest,
-    publisher, timestamp, text,
+    publisher,
+    timestamp,
+    text,
     private flag )
 
 Collections
