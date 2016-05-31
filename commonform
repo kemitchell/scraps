@@ -141,3 +141,13 @@ Annotation Context
   Performance:
 
     This means running one query per child of a form to display.
+
+Notifications
+
+  - New publications from a publisher.
+
+  - New editions of a project.
+
+  - Annotations to publications.
+
+  - Replies to own annotations.
