@@ -1,3 +1,7 @@
 Problematic npm Registry Updates
 
   flint-tools has over 315 versions
+
+Finding new parts of an update.
+
+  Compare .versions to previous update.
