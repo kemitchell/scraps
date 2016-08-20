@@ -5,3 +5,8 @@ Problematic npm Registry Updates
 Finding new parts of an update.
 
   Compare .versions to previous update.
+
+Notable Package update_seqs
+
+  browserify 2986287
+  semver 2829589
