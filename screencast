@@ -3,5 +3,7 @@ recordmydesktop
 
 GIFs
 
-byzanz
-gifsicle
+byzanz-record
+  --cursor
+  --delay=
+  --duration=
