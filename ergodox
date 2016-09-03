@@ -1,0 +1,12 @@
+Infinity ErgoDox
+
+Flashing
+
+https://input.club/configurator-ergodox
+
+sudo apt-get install dfu-utils
+
+Hardware flash switch through hole in baseplate.
+LED turns orange.
+
+sudo dfu-util -D side.bin
