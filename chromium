@@ -1,0 +1,4 @@
+Key Ring
+
+Run without gnome-keyring:
+google-chrome --password-store=basic
