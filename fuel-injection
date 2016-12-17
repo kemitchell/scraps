@@ -1,0 +1,21 @@
+Voltage Sensors
+
+-  Crank Position
+-  Throttle Position
+-  Atmospheric Pressure
+-  Intake air Pressure
+-  Air Temperature
+-  Coolant (or Engine) Temperature
+-  Cylinder Identifier
+-  Lean Angle
+-  Oxygen
+
+Components
+
+-  Engine Control Unit
+-  Fuel Injectors
+-  Fuel Pump
+-  Fuel Rail
+-  Pressure Regulator (may be a component of the fuel pump)
+
+Prefer systems that measure, not calculate, intake volume.
